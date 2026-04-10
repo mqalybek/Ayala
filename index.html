@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayala — On-demand Nanny Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-terracotta)" stroke-width="2" class="logo__icon">
+                    <path d="M12 21.03l-4.14-8.81A5.02 5.02 0 0113.8 6.46l4.63 9.87A5.02 5.02 0 0112 21.03z"/>
+                    <path d="M12 21.03l4.14-8.81A5.02 5.02 0 0010.2 6.46L5.57 16.3A5.02 5.02 0 0012 21.03z"/>
+                </svg>
+                Ayala
+            </a>
+            
+            <nav class="nav" id="nav">
+                <a href="#" class="nav__link">О сервисе</a>
+                <a href="#" class="nav__link">Отзывы</a>
+                <a href="#" class="btn btn--outline">Стать няней</a>
+                <a href="#" class="btn btn--text">Войти</a>
+                <button class="btn btn--sos mobile-only" title="Выезд в течение 30 минут">SOS-няня</button>
+            </nav>
+            
+            <!-- Десктопная SOS-кнопка (может быть спрятана или показана) -->
+            <button class="btn btn--sos desktop-sos" title="Выезд в течение 30 минут">SOS-няня</button>
+            
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__bg">
+                <img src="../../brain/919f9d83-1b3a-4a31-bf0e-4a3127a333b8/ayala_hero_1775819433294.png" alt="Ayala Hero Image" class="hero__img">
+                <div class="hero__overlay"></div>
+            </div>
+            
+            <div class="container hero__content">
+                <div class="hero__text-box">
+                    <h1 class="title-primary">Ваше спокойствие — наша забота.</h1>
+                    <p class="subtitle">Ayala находит лучших нянь в вашем районе за 5 минут. Все специалисты прошли 4 этапа проверки, включая психологическое тестирование.</p>
+                    <button class="btn btn--primary btn--large">Выбрать свою няню</button>
+                </div>
+                
+                <!-- Виджет поиска -->
+                <div class="search-widget">
+                    <div class="widget-field">
+                        <label>Где?</label>
+                        <input type="text" placeholder="Укажите район">
+                    </div>
+                    <div class="widget-divider"></div>
+                    <div class="widget-field">
+                        <label>Когда?</label>
+                        <input type="date">
+                    </div>
+                    <div class="widget-divider"></div>
+                    <div class="widget-field">
+                        <label>На сколько?</label>
+                        <select>
+                            <option>2 часа</option>
+                            <option>4 часа</option>
+                            <option>Весь день</option>
+                        </select>
+                    </div>
+                    <button class="widget-btn" aria-label="Поиск">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Block -->
+        <section class="trust section">
+            <div class="container">
+                <h2 class="section-title text-center">Почему нам доверяют</h2>
+                <div class="trust-grid">
+                    <div class="trust-card">
+                        <div class="trust-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        </div>
+                        <h3>Психолог и аттестация</h3>
+                        <p>Жесткий отбор и регулярная аттестация наших нянь. Только 5% проходят проверку.</p>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <h3>GPS и видеоотчеты</h3>
+                        <p>Безопасность прежде всего: отслеживайте местоположение во время прогулок.</p>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <h3>Отзывы Real Parent</h3>
+                        <p>Честные отзывы от проверенных родителей. Прозрачная система рейтинга.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nanny Feed -->
+        <section class="feed section bg-milk">
+            <div class="container">
+                <h2 class="section-title text-center">Няни рядом с вами</h2>
+                <div class="feed-grid">
+                    <div class="nanny-card">
+                        <img src="../../brain/919f9d83-1b3a-4a31-bf0e-4a3127a333b8/nanny_avatar_1775819507365.png" alt="Няня Аружан" class="nanny-card__avatar">
+                        <div class="nanny-card__info">
+                            <h4>Аружан, 24</h4>
+                            <div class="nanny-card__rating">
+                                <span class="star">★</span> 4.9 (42 отзыва)
+                            </div>
+                            <div class="nanny-card__price">2500 ₸/час</div>
+                        </div>
+                    </div>
+                    
+                    <div class="nanny-card">
+                        <img src="../../brain/919f9d83-1b3a-4a31-bf0e-4a3127a333b8/nanny_avatar_1775819507365.png" alt="Няня Динара" class="nanny-card__avatar">
+                        <div class="nanny-card__info">
+                            <h4>Динара, 31</h4>
+                            <div class="nanny-card__rating">
+                                <span class="star">★</span> 5.0 (128 отзывов)
+                            </div>
+                            <div class="nanny-card__price">3500 ₸/час</div>
+                        </div>
+                    </div>
+
+                    <div class="nanny-card">
+                        <img src="../../brain/919f9d83-1b3a-4a31-bf0e-4a3127a333b8/nanny_avatar_1775819507365.png" alt="Няня Мадина" class="nanny-card__avatar">
+                        <div class="nanny-card__info">
+                            <h4>Мадина, 22</h4>
+                            <div class="nanny-card__rating">
+                                <span class="star">★</span> 4.8 (15 отзывов)
+                            </div>
+                            <div class="nanny-card__price">2000 ₸/час</div>
+                        </div>
+                    </div>
+                    
+                    <div class="nanny-card">
+                        <img src="../../brain/919f9d83-1b3a-4a31-bf0e-4a3127a333b8/nanny_avatar_1775819507365.png" alt="Няня Камила" class="nanny-card__avatar">
+                        <div class="nanny-card__info">
+                            <h4>Камила, 28</h4>
+                            <div class="nanny-card__rating">
+                                <span class="star">★</span> 4.9 (84 отзыва)
+                            </div>
+                            <div class="nanny-card__price">3000 ₸/час</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#" class="logo" style="margin-bottom: 1rem; color: var(--color-font);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-terracotta)" stroke-width="2" class="logo__icon">
+                    <path d="M12 21.03l-4.14-8.81A5.02 5.02 0 0113.8 6.46l4.63 9.87A5.02 5.02 0 0112 21.03z"/>
+                    <path d="M12 21.03l4.14-8.81A5.02 5.02 0 0010.2 6.46L5.57 16.3A5.02 5.02 0 0012 21.03z"/>
+                </svg>
+                Ayala
+            </a>
+            <p>&copy; 2026 Ayala On-Demand Nanny Service. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
